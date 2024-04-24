@@ -6,6 +6,11 @@ const withVanillaExtract = createVanillaExtractPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
+  compiler: {
+    removeConsole: {
+      exclude: ['error']
+    }
+  },
 };
 
 export default withSentryConfig(withSentryConfig(withVanillaExtract(nextConfig), {

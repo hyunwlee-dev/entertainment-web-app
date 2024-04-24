@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "husky install",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@sentry/nextjs": "^7.112.1",
@@ -15,12 +17,14 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vanilla-extract/next-plugin": "^2.4.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
+    "next-sitemap": "^4.2.3",
     "normalize.css": "^8.0.1",
     "typescript": "^5"
   }
