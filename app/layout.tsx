@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     name: "hyunwlee",
   },
   keywords: ['Next.js', 'React', 'TypeScript'],
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL(url as string),
   openGraph: {
     title: title,
     description: description,
