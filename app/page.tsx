@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      version update
+      version minor upgrade
     </main>
   );
 }

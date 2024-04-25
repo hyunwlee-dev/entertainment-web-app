@@ -9,7 +9,7 @@
     "lint": "next lint",
     "postinstall": "husky install",
     "postbuild": "next-sitemap",
-    "commit": "npx cz-customizable $npm_package_config_cz-cu"
+    "commit": "npx cz-customizable"
   },
   "dependencies": {
     "@sentry/nextjs": "^7.112.1",
