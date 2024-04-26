@@ -1,11 +1,24 @@
+import { authenticate } from "../lib/actions";
+
 export default function LoginPage() {
   return (
-    <>
-      Login
-      Email address
-      Password
-      Login to your account
-      {"Don't have an account? Sign Up"}
-    </>
+    <form
+      action={async (formData) => {
+        "use server"
+        await authenticate("credentials", formData);
+      }}
+    >
+      <label>
+        Email
+        <input name="email" type="email" />
+      </label>
+      <br />
+      <label>
+        Password
+        <input name="password" type="password" />
+      </label>
+      <br />
+      <button>Sign In</button>
+    </form>
   );
 }
