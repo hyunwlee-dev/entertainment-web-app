@@ -1,24 +1,22 @@
 import type { NextAuthConfig } from 'next-auth';
 
-export const authConfig: NextAuthConfig = {
+export const authConfig = {
   pages: {
     signIn: '/login',
   },
   callbacks: {
-    async authorized({ auth, request: { nextUrl } }) {
+    authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnTvSeries = nextUrl.pathname === '/tv-series';
-      if (isOnTvSeries) {
+      const isOnProtected = !(nextUrl.pathname.startsWith('/login'));
+      if (isOnProtected) {
         if (isLoggedIn) return true;
         return false;
       } else if (isLoggedIn) {
-        return Response.redirect(new URL('/tv-series', nextUrl.origin));
+        return Response.redirect(new URL('/', nextUrl));
       }
-      if (!isLoggedIn && isOnTvSeries)
-        return Response.redirect(new URL('/login', nextUrl.origin));
       return true;
     },
   },
   providers: [],
-};
+} satisfies NextAuthConfig;
 
