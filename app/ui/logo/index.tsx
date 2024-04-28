@@ -6,9 +6,9 @@ import LogoIcon from "/public/icons/logo.svg";
 interface LogoProps extends HTMLAttributes<HTMLAnchorElement> {
 }
 
-export default function Logo({ className, ...props }: LogoProps) {
+export default function Logo({ ...props }: LogoProps) {
   return (
-    <Link className={className} href={'/'} {...props}>
+    <Link href={'/'} {...props}>
       <h1 className={styles.srOnly}>
         entertainment-web-app
       </h1>
