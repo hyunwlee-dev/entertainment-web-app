@@ -1,4 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css";
+import { vars } from "./theme.css";
 
 globalStyle('*, *::before, *::after', {
   boxSizing: "border-box",
@@ -9,6 +10,8 @@ globalStyle('*, *::before, *::after', {
 globalStyle('html, body', {
   fontWeight: '500',
   fontSize: '18px',
+  background: vars.color.darkBlue,
+  color: vars.color.pureWhite
 });
 
 globalStyle('a', {
@@ -23,5 +26,6 @@ globalStyle('li', {
 globalStyle('button', {
   background: 'transparent',
   border: 'none',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  color: vars.color.pureWhite
 });

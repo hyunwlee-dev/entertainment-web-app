@@ -1,4 +1,4 @@
-import { authenticate } from "../lib/actions";
+import { authenticate } from "@/app/lib/actions";
 
 export default function LoginPage() {
   return (
