@@ -30,11 +30,11 @@ createGlobalTheme(":root", vars, {
     semiDarkBlue: "#161D2F",
   },
   font: {
-    headingL: "light 32px",
-    headingM: "light 24px",
-    headingS: "medium 24px",
-    headingXS: "medium 18px",
-    bodyM: "light 15px",
-    bodyS: "light 13px",
+    headingL: "300 32px sans-serif",
+    headingM: "300 24px sans-serif",
+    headingS: "500 24px sans-serif",
+    headingXS: "500 18px sans-serif",
+    bodyM: "300 15px sans-serif",
+    bodyS: "300 13px sans-serif",
   }
 });
