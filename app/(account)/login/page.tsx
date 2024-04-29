@@ -1,4 +1,5 @@
 import { authenticate } from "@/app/lib/actions";
+import Button from "@/app/ui/common/button";
 
 export default function LoginPage() {
   return (
@@ -18,7 +19,7 @@ export default function LoginPage() {
         <input name="password" type="password" />
       </label>
       <br />
-      <button>Sign In</button>
+      <Button type='submit'>Login to your account</Button>
     </form>
   );
 }
