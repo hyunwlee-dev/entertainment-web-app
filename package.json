@@ -40,7 +40,8 @@
     "normalize.css": "^8.0.1",
     "react-hook-form": "^7.51.3",
     "semantic-release": "^23.0.8",
-    "typescript": "^5"
+    "typescript": "^5",
+    "zod": "^3.23.7"
   },
   "config": {
     "cz-customizable": {

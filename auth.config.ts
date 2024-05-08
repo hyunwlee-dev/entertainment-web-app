@@ -5,6 +5,11 @@ export const authConfig = {
     signIn: '/login',
   },
   callbacks: {
+    redirect: async ({ url, baseUrl }) => {
+      if (url.includes('/login?callbackUrl'))
+        return baseUrl;
+      return url;
+    },
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isOnProtected = !(nextUrl.pathname.startsWith('/login'));

@@ -3,3 +3,8 @@ export type User = {
   email: string;
   password: string;
 };
+
+export type FormValues = {
+  email: string;
+  password: string;
+}

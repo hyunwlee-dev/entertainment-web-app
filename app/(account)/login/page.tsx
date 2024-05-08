@@ -1,25 +1,10 @@
-import { authenticate } from "@/app/lib/actions";
-import Button from "@/app/ui/common/button";
+import { metadata } from "@/app/layout";
+import LoginBoard from "@/app/ui/login/login-board";
+
+metadata.title = 'login';
 
 export default function LoginPage() {
   return (
-    <form
-      action={async (formData) => {
-        "use server"
-        await authenticate("credentials", formData);
-      }}
-    >
-      <label>
-        Email
-        <input name="email" type="email" />
-      </label>
-      <br />
-      <label>
-        Password
-        <input name="password" type="password" />
-      </label>
-      <br />
-      <Button type='submit'>Login to your account</Button>
-    </form>
-  );
+    <LoginBoard />
+  )
 }

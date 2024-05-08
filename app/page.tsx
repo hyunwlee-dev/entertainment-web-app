@@ -1,4 +1,5 @@
 import { signOut } from "@/auth";
+import { redirect } from "next/navigation";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           await signOut();
         }}
       >
-        <button>
+        <button >
           Sign Out
         </button>
       </form>
