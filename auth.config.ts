@@ -6,8 +6,9 @@ export const authConfig = {
   },
   callbacks: {
     redirect: async ({ url, baseUrl }) => {
-      if (url.includes('/login?callbackUrl'))
+      if (url.includes('/login?callbackUrl')) {
         return baseUrl;
+      }
       return url;
     },
     authorized({ auth, request: { nextUrl } }) {
