@@ -80,8 +80,8 @@ function SignUpButton() {
   const { pending } = useFormStatus();
   return (
     <Button
-      className={clsx(styles.button, { [styles.disabled]: pending })}
-      disabled={pending}
+      className={clsx(styles.button, styles.disabled)}
+      disabled
       aria-disabled={pending}>
       {pending ? 'Loading...' : 'Create an account'}
     </Button>
