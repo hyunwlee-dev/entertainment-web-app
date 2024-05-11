@@ -1,11 +1,21 @@
 import Container from "@/app/ui/common/container";
-import Logo from "@/app/ui/common/logo";
+import Navigation from "@/app/ui/common/navigation";
+import { signOut } from "@/auth";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Container>
-      <Logo />
-      {children}
-    </Container>
+    <>
+      <Navigation
+        signOut={
+          async () => {
+            'use server'
+            await signOut()
+          }
+        }
+      />
+      <Container as='main'>
+        {children}
+      </Container>
+    </>
   );
 }

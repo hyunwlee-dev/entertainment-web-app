@@ -1,20 +1,21 @@
 import { signOut } from "@/auth";
-import { redirect } from "next/navigation";
+import Navigation from "./ui/common/navigation";
+import Container from "./ui/common/container";
 
 export default function Home() {
   return (
-    <main>
-      version minor upgrade
-      <form
-        action={async () => {
-          'use server';
-          await signOut();
-        }}
-      >
-        <button >
-          Sign Out
-        </button>
-      </form>
-    </main>
+    <>
+      <Navigation
+        signOut={
+          async () => {
+            'use server'
+            await signOut()
+          }
+        }
+      />
+      <Container as='main'>
+        version minor upgrade
+      </Container>
+    </>
   );
 }

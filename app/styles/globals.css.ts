@@ -9,7 +9,7 @@ globalStyle('*, *::before, *::after', {
 
 globalStyle('html, body', {
   fontWeight: '500',
-  fontSize: '18px',
+  fontSize: '16px',
   background: vars.color.darkBlue,
   color: vars.color.pureWhite
 });
