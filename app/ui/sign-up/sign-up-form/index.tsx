@@ -8,7 +8,6 @@ import clsx from 'clsx';
 import styles from './sign-up-form.css';
 
 export default function SignUpForm() {
-  // const initialState = { errors: {}, message: null };
   const [errorMessage, dispatch] = useFormState(signUp, undefined);
 
   return (
@@ -40,7 +39,7 @@ export default function SignUpForm() {
       />
       <label
         className={styles.srOnly}
-        htmlFor="repeat-password"
+        htmlFor="repeatPassword"
       >
         Repeat Password
       </label>
