@@ -1,3 +1,4 @@
+import { $breakpoints } from "@/app/styles/utils";
 import { style } from "@vanilla-extract/css";
 
 const srOnly = style({
@@ -13,6 +14,18 @@ const srOnly = style({
   whiteSpace: 'nowrap'
 });
 
-const styles = { srOnly };
+const icon = style({
+  transform: 'scale(0.78125)',
+  '@media': {
+    [$breakpoints.tablet]: {
+      transform: 'scale(1)',
+    }
+  }
+});
+
+const styles = {
+  srOnly,
+  icon
+};
 
 export default styles;

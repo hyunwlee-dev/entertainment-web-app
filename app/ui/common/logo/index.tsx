@@ -12,7 +12,7 @@ export default function Logo({ ...props }: LogoProps) {
       <h1 className={styles.srOnly}>
         entertainment-web-app
       </h1>
-      <LogoIcon />
+      <LogoIcon className={styles.icon} />
     </Link>
   );
 };
