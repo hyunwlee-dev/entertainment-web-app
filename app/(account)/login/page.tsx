@@ -1,10 +1,10 @@
 import { metadata } from "@/app/layout";
-import LoginBoard from "@/app/ui/login/login-board";
+import LoginForm from "@/app/ui/login/login-form";
 
 metadata.title = 'login';
 
 export default function LoginPage() {
   return (
-    <LoginBoard />
-  )
+    <LoginForm />
+  );
 }

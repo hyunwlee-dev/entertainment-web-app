@@ -1,13 +1,11 @@
+import { metadata } from "@/app/layout";
+import SignUpForm from "@/app/ui/sign-up/sign-up-form";
+
+metadata.title = 'sign-up';
+
 export default function SignUpPage() {
   return (
-    <>
-      Sign Up
-      Email address
-      Password
-      Repeat password
-      Create an account
-      Already have an account ? Login
-    </>
+    <SignUpForm />
   );
 }
 
