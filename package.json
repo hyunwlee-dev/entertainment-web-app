@@ -23,6 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@plaiceholder/next": "^3.0.0",
     "@svgr/webpack": "^8.1.0",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
@@ -38,8 +39,10 @@
     "next-auth": "^5.0.0-beta.17",
     "next-sitemap": "^4.2.3",
     "normalize.css": "^8.0.1",
+    "plaiceholder": "^3.0.0",
     "react-hook-form": "^7.51.3",
     "semantic-release": "^23.0.8",
+    "sharp": "^0.33.3",
     "typescript": "^5",
     "zod": "^3.23.7"
   },
