@@ -1,5 +1,8 @@
 import { SvgType } from "@/app/type/svg";
-export default function NavBookmarkedIcon({ className, isStroke = false }: SvgType & { className?: string }) {
+export default function BookmarkedIcon({
+  className,
+  isStroke = false
+}: SvgType & { className?: string }) {
   return (
     <svg
       className={className}

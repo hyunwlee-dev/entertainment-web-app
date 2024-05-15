@@ -1,5 +1,9 @@
 import { SvgType } from "@/app/type/svg";
-export default function NavHomeIcon({ className, isStroke = false }: SvgType & { className?: string }) {
+
+export default function HomeIcon({
+  className,
+  isStroke = false
+}: SvgType & { className?: string }) {
   return (
     <svg
       className={className}

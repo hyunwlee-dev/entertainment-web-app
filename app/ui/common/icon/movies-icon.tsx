@@ -1,5 +1,9 @@
 import { SvgType } from "@/app/type/svg";
-export default function NavMoviesIcon({ className, isStroke = false }: SvgType & { className?: string }) {
+
+export default function MoviesIcon({
+  className,
+  isStroke = false
+}: SvgType & { className?: string }) {
   return (
     <svg
       className={className}

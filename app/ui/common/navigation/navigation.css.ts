@@ -3,12 +3,12 @@ import { $breakpoints } from "@/app/styles/utils";
 import { style } from "@vanilla-extract/css";
 
 const wrapper = style({
+  zIndex: '100',
   width: '100%',
   padding: '0 1rem',
   display: 'flex',
   flexFlow: 'row nowrap',
-  justifyContent: 'space-between',
-  alignItems: 'center',
+  justifyContent: 'space-between', alignItems: 'center',
   background: vars.color.semiDarkBlue,
   height: '4rem',
   '@media': {
@@ -51,6 +51,9 @@ const list = style({
   },
 });
 
+const form = style({
+});
+
 const icon = style({
   transform: 'scale(0.8)',
   '@media': {
@@ -63,12 +66,16 @@ const icon = style({
 const signOut = style({
   marginRight: '1rem',
   '@media': {
+    [$breakpoints.tablet]: {
+      transform: 'sacle(1.25)',
+      marginRight: '2rem',
+    },
     [$breakpoints.laptop]: {
-      marginRight: '0',
       position: 'absolute',
+      marginRight: '0',
+      bottom: '7rem',
       left: '50%',
-      bottom: '6rem',
-      transform: 'translateX(-50%)'
+      transform: 'translateX(-50%) scale(1.5)'
     }
   }
 });
@@ -76,6 +83,7 @@ const signOut = style({
 const styles = {
   wrapper,
   list,
+  form,
   icon,
   signOut
 };

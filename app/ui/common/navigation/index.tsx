@@ -2,12 +2,9 @@
 
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
+import Icon from "@/app/ui/common/icon";
 import Logo from "@/app/ui/common/logo";
 import Avatar from "@/app/ui/common/avatar";
-import NavHomeIcon from "./home-icon";
-import NavMoviesIcon from "./movies-icon";
-import NavTvSeriesIcon from "./tv-series-icon";
-import NavBookmarkedIcon from "./bookmarked-icon";
 import SignOutIcon from "/public/icons/sign-out.svg";
 import styles from "./navigation.css";
 
@@ -16,19 +13,19 @@ export default function Navigation({ signOut }: { signOut: () => void }) {
   const links = [
     {
       href: "/",
-      icon: <NavHomeIcon isStroke={segment === null} className={styles.icon} />,
+      icon: <Icon name='home' isStroke={segment === null} className={styles.icon} />,
     },
     {
       href: "/movies",
-      icon: <NavMoviesIcon isStroke={segment === "movies"} className={styles.icon} />,
+      icon: <Icon name='movies' isStroke={segment === "movies"} className={styles.icon} />,
     },
     {
       href: "/tv-series",
-      icon: <NavTvSeriesIcon isStroke={segment === "tv-series"} className={styles.icon} />,
+      icon: <Icon name='tv-series' isStroke={segment === "tv-series"} className={styles.icon} />,
     },
     {
       href: "/bookmarked",
-      icon: <NavBookmarkedIcon isStroke={segment === "bookmarked"} className={styles.icon} />,
+      icon: <Icon name='bookmarked' isStroke={segment === "bookmarked"} className={styles.icon} />,
     },
   ];
 
@@ -42,7 +39,7 @@ export default function Navigation({ signOut }: { signOut: () => void }) {
           </Link>
         ))}
       </ul>
-      <form action={signOut}>
+      <form action={signOut} className={styles.form}>
         <button className={styles.signOut} type='submit'>
           <SignOutIcon className={styles.icon} />
         </button>
