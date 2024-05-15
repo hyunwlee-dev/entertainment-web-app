@@ -1,5 +1,6 @@
 import { globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
+import { $breakpoints } from "./utils";
 
 globalStyle('*, *::before, *::after', {
   boxSizing: "border-box",
@@ -11,7 +12,8 @@ globalStyle('html, body', {
   fontWeight: '500',
   fontSize: '16px',
   background: vars.color.darkBlue,
-  color: vars.color.pureWhite
+  color: vars.color.pureWhite,
+  minHeight: '100vh',
 });
 
 globalStyle('a', {

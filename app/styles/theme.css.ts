@@ -18,6 +18,7 @@ export const vars = createThemeContract({
     headingXS: null,
     bodyM: null,
     bodyS: null,
+    title: null,
   }
 });
 
@@ -36,5 +37,6 @@ createGlobalTheme(":root", vars, {
     headingXS: "500 18px sans-serif",
     bodyM: "300 15px sans-serif",
     bodyS: "300 13px sans-serif",
+    title: "300 20px sans-serif"
   }
 });
