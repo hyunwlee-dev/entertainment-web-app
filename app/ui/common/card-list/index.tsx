@@ -1,24 +1,24 @@
-import { Entertainment } from "@/app/lib/definitions";
 import Card from "@/app/ui/common/card";
+import { fetchMockDatas } from "@/app/lib/fetchData";
 import styles from "./card-list.css";
 
 interface CardListProps {
   title: string;
-  datas: Entertainment[];
 }
 
-export default function CardList({ title, datas }: CardListProps) {
+export default async function CardList({ title }: CardListProps) {
+  const mockDatas = await fetchMockDatas();
   return (
-    <>
+    <section className={styles.cardList}>
       <h2 className={styles.heading}>{title}</h2>
       <ul className={styles.list}>
-        {datas?.map((data) => (
+        {mockDatas?.map((data) => (
           <Card key={data.title}>
             <Card.Thumbnail {...data} />
-            <Card.Descrition {...data} />
+            <Card.Info {...data} />
           </Card>
         ))}
       </ul>
-    </>
+    </section>
   );
 }

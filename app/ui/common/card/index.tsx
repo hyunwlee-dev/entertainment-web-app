@@ -7,6 +7,7 @@ import Icon from "@/app/ui/common/icon";
 import OvalIcon from "/public/icons/oval.svg";
 import clsx from "clsx";
 import styles from "./card.css";
+import Description from "../description";
 
 export default async function Card({ children, ...props }: HTMLAttributes<HTMLLIElement>) {
   return (
@@ -71,30 +72,11 @@ async function Thumbnail({
 Card.Thumbnail = Thumbnail;
 Thumbnail.displayName = 'card-thumnail';
 
-async function Description({
-  title,
-  year,
-  category,
-  rating
-}: Entertainment) {
+async function Info(data: Entertainment) {
   return (
-    <div className={styles.description}>
-      <div className={styles.inner}>
-        <span>{year}</span>
-        <OvalIcon className={styles.ovalLt} />
-        <span>{
-          (category === 'Movie')
-            ? <Icon name='movies' isStroke className={styles.categoryIcon} />
-            : <Icon name='tv-series' isStroke className={styles.categoryIcon} />
-        }</span>
-        <OvalIcon className={styles.ovalRt} />
-        <span>{category}</span>
-        <span>{rating}</span>
-      </div>
-      <h4 className={styles.title}>{title}</h4>
-    </div>
+    <Description {...data} />
   );
 }
 
-Card.Descrition = Description;
-Description.displayName = 'card-descrition';
+Card.Info = Info;
+Info.displayName = 'card-info';

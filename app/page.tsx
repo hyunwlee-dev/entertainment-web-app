@@ -1,11 +1,11 @@
+import { Suspense } from "react";
 import { signOut } from "@/auth";
-import Navigation from "./ui/common/navigation";
-import Container from "./ui/common/container";
-import { fetchMockDatas } from "./lib/fetchData";
-import CardList from "./ui/common/card-list";
+import Navigation from "@/app/ui/common/navigation";
+import Container from "@/app/ui/common/container";
+import CardList from "@/app/ui/common/card-list";
+import TrendingList from "@/app/ui/common/trending-list";
 
 export default async function Home() {
-  const mockDatas = await fetchMockDatas();
   return (
     <>
       <Navigation
@@ -17,10 +17,12 @@ export default async function Home() {
         }
       />
       <Container as='main'>
-        <CardList
-          title='Recommended for you'
-          datas={mockDatas}
-        />
+        <Suspense fallback={<>loading...</>}>
+          <TrendingList title='Trending' />
+        </Suspense>
+        <Suspense fallback={<>loading...</>}>
+          <CardList title='Recommended for you' />
+        </Suspense>
       </Container>
     </>
   );

@@ -2,6 +2,20 @@ import { vars } from "@/app/styles/theme.css";
 import { $breakpoints } from "@/app/styles/utils";
 import { style } from "@vanilla-extract/css";
 
+const cardList = style({
+  marginTop: '1.5rem',
+  '@media': {
+    [$breakpoints.tablet]: {
+      marginTop: '2.438rem',
+    },
+    [$breakpoints.laptop]: {
+      marginTop: '0',
+      position: 'absolute',
+      top: '29.063rem',
+    }
+  }
+});
+
 const heading = style({
   width: '100%',
   font: vars.font.title,
@@ -34,6 +48,7 @@ const list = style({
 });
 
 const styles = {
+  cardList,
   heading,
   list,
 };
