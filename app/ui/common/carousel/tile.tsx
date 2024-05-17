@@ -41,7 +41,7 @@ export default async function Tile({
         loading='eager'
         blurDataURL={base64}
         placeholder="blur"
-        sizes='33vw'
+        sizes="75vw"
       />
       <Bookmark isMarked={isBookmarked} />
       <Description
