@@ -33,6 +33,8 @@
     "clsx": "^2.1.1",
     "cz-customizable": "^7.0.0",
     "dotenv": "^16.4.5",
+    "embla-carousel-autoplay": "^8.0.4",
+    "embla-carousel-react": "^8.0.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
     "husky": "^9.0.11",
