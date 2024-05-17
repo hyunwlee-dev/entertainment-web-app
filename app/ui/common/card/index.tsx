@@ -3,8 +3,6 @@ import Image, { getImageProps } from "next/image";
 import getBase64 from "@/app/util/getBase64";
 import Bookmark from "@/app/ui/common/bookmark";
 import { Entertainment } from "@/app/lib/definitions";
-import Icon from "@/app/ui/common/icon";
-import OvalIcon from "/public/icons/oval.svg";
 import clsx from "clsx";
 import styles from "./card.css";
 import Description from "../description";

@@ -1,8 +1,15 @@
 import Icon from "@/app/ui/common/icon";
-import { Entertainment } from "@/app/lib/definitions";
 import OvalIcon from "/public/icons/oval.svg";
 import clsx from "clsx";
 import styles from "./description.css";
+
+interface DescriptionProp {
+  className?: string;
+  title: string;
+  year: number;
+  category: 'Movie' | 'TV Series';
+  rating: 'PG' | 'E' | '18+';
+}
 
 export default function Description({
   title,
@@ -10,7 +17,7 @@ export default function Description({
   category,
   rating,
   className,
-}: Entertainment & { className?: string }) {
+}: DescriptionProp) {
   return (
     <div className={clsx(styles.description, className)}>
       <div className={styles.inner}>
@@ -27,6 +34,5 @@ export default function Description({
       </div>
       <h3 className={styles.title}>{title}</h3>
     </div>
-
   );
 }
