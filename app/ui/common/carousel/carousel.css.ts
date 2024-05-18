@@ -12,7 +12,7 @@ const embla = style({
     },
     [$breakpoints.laptop]: {
       position: 'absolute',
-      width: '1249px',
+      width: '1240px',
     }
   }
 
@@ -24,6 +24,11 @@ const emblaContainer = style({
   columnGap: '1rem',
   width: '100%',
   height: '100%',
+  '@media': {
+    [$breakpoints.tablet]: {
+      columnGap: '2.5rem',
+    },
+  }
 });
 
 const emblaSlide = style({

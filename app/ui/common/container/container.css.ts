@@ -12,7 +12,7 @@ const container = style({
     [$breakpoints.laptop]: {
       position: 'absolute',
       left: '10rem',
-      maxWidth: '1249px',
+      maxWidth: '1240px',
     },
     ['screen and (min-width: 1580px)']: {
       position: 'static',

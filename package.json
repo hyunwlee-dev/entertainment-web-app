@@ -43,6 +43,7 @@
     "normalize.css": "^8.0.1",
     "plaiceholder": "^3.0.0",
     "react-hook-form": "^7.51.3",
+    "react-loading-skeleton": "^3.4.0",
     "semantic-release": "^23.0.8",
     "sharp": "^0.33.3",
     "typescript": "^5",
