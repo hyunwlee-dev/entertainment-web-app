@@ -5,7 +5,7 @@ export async function fetchMockDatas(): Promise<Entertainment[]> {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve([...tvMovies])
-    }, 0);
+    }, 3000);
   });
 }
 
