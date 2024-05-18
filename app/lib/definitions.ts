@@ -24,7 +24,6 @@ type Thumbnail = {
 export type Entertainment = {
   title: string;
   imgSrc: string;
-  thumbnail: Thumbnail;
   year: number;
   category: 'Movie' | 'TV Series';
   rating: 'PG' | 'E' | '18+';

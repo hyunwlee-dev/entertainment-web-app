@@ -1,11 +1,32 @@
 import { Entertainment } from "./definitions";
-import { tvMovies } from "./data";
+import { entertainments } from "./data";
+import { sql } from "@vercel/postgres";
+import { toCamelCase } from "../util/toCamelCase";
 
 export async function fetchMockDatas(): Promise<Entertainment[]> {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve([...tvMovies])
-    }, 3000);
+      resolve([...entertainments as Entertainment[]])
+    }, 2000);
   });
 }
 
+export async function fetchEntertainments(): Promise<Entertainment[]> {
+  try {
+    const data = await sql<Entertainment>`SELECT * FROM entertainments`;
+    return data.rows.map(toCamelCase);
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch entertainments data.');
+  }
+}
+
+export async function fetchTrendingEntertainments(): Promise<Entertainment[]> {
+  try {
+    const data = await sql<Entertainment>`SELECT * FROM entertainments WHERE is_trending`;
+    return data.rows.map(toCamelCase);
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch entertainments data.');
+  }
+}

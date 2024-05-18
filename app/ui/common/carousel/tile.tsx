@@ -31,6 +31,7 @@ export default async function Tile({
 
   return (
     <picture key={title} className={styles.emblaSlide}>
+      {`${title} / ${imgSrc}`}
       <source media="(min-width: 768px)" srcSet={tablet} />
       <Image
         className={styles.image}
@@ -38,9 +39,9 @@ export default async function Tile({
         src={`/images/${imgSrc}/trending/small.jpg`}
         alt={title}
         fill
-        loading='eager'
         blurDataURL={base64}
         placeholder="blur"
+        loading='eager'
         sizes="75vw"
       />
       <Bookmark isMarked={isBookmarked} />

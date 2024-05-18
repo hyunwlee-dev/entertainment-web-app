@@ -1,6 +1,4 @@
-import { Entertainment } from "./definitions";
-
-export const users = [
+const users = [
   {
     id: '410544b2-4001-4271-9855-fec4b6a6442a',
     email: 'test@test.com',
@@ -8,7 +6,7 @@ export const users = [
   },
 ];
 
-export const tvMovies: Entertainment[] = [
+const entertainments = [
   {
     "imgSrc": 'beyond-earth',
     "title": "Beyond Earth",
@@ -494,3 +492,8 @@ export const tvMovies: Entertainment[] = [
     "isTrending": false
   }
 ];
+
+module.exports = {
+  users,
+  entertainments,
+}
