@@ -6,7 +6,7 @@ import CardList from "@/app/ui/common/card-list";
 import TrendingList from "@/app/ui/common/trending-list";
 import SearchBar from "@/app/ui/common/search-bar";
 import TrendingListSkeleton from "@/app/ui/common/trending-list/trending-list.skeleton";
-import CardListSkeleton from "./ui/common/card-list/card-list.skeleton";
+import CardListSkeleton from "@/app/ui/common/card-list/card-list.skeleton";
 
 export default async function Home() {
   return (
