@@ -1,13 +1,15 @@
 import Card from "@/app/ui/common/card";
-import { fetchEntertainments } from "@/app/lib/fetchData";
+import { fetchFilteredEntertainments } from "@/app/lib/fetchData";
 import styles from "./card-list.css";
 
 interface CardListProps {
   title: string;
+  query: string;
 }
 
-export default async function CardList({ title }: CardListProps) {
-  const entertainments = await fetchEntertainments();
+export default async function CardList({ query, title }: CardListProps) {
+  const entertainments = await fetchFilteredEntertainments(query);
+
   return (
     <section className={styles.cardList}>
       <h2 className={styles.heading}>{title}</h2>

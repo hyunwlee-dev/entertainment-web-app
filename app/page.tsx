@@ -8,7 +8,8 @@ import SearchBar from "@/app/ui/common/search-bar";
 import TrendingListSkeleton from "@/app/ui/common/trending-list/trending-list.skeleton";
 import CardListSkeleton from "@/app/ui/common/card-list/card-list.skeleton";
 
-export default async function Home() {
+export default async function Home({ searchParams }: { searchParams?: { q: string } }) {
+  const query = searchParams?.q || '';
   return (
     <>
       <Navigation
@@ -25,7 +26,7 @@ export default async function Home() {
           <TrendingList title='Trending' />
         </Suspense>
         <Suspense fallback={<CardListSkeleton />}>
-          <CardList title='Recommended for you' />
+          <CardList title='Recommended for you' query={query} />
         </Suspense>
       </Container>
     </>

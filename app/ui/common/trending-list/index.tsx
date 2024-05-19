@@ -1,7 +1,7 @@
-import { fetchTrendingEntertainments } from "@/app/lib/fetchData";
 import Carousel from "@/app/ui/common/carousel";
 import styles from "./trending-list.css";
 import Tile from "@/app/ui/common/carousel/tile";
+import { fetchTrendingEntertainments } from "@/app/lib/fetchData";
 
 export default async function TrendingList({ title }: { title: string }) {
   const trendings = await fetchTrendingEntertainments();
