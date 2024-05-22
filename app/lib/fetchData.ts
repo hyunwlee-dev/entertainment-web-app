@@ -1,3 +1,4 @@
+"use server";
 import { Entertainment } from "./definitions";
 import { entertainments } from "./data";
 import { sql } from "@vercel/postgres";

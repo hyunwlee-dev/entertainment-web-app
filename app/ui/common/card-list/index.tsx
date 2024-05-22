@@ -1,6 +1,6 @@
 import Card from "@/app/ui/common/card";
-import { fetchFilteredEntertainments } from "@/app/lib/fetchData";
 import styles from "./card-list.css";
+import { fetchFilteredEntertainments } from "@/app/lib/fetchData";
 
 interface CardListProps {
   title: string;
@@ -9,7 +9,6 @@ interface CardListProps {
 
 export default async function CardList({ query, title }: CardListProps) {
   const entertainments = await fetchFilteredEntertainments(query);
-
   return (
     <section className={styles.cardList}>
       <h2 className={styles.heading}>{title}</h2>

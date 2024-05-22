@@ -35,13 +35,12 @@ export default async function Tile({
       <source media="(min-width: 768px)" srcSet={tablet} />
       <Image
         className={styles.image}
-        priority={true}
         src={`/images/${imgSrc}/trending/small.jpg`}
         alt={title}
         fill
         blurDataURL={base64}
         placeholder="blur"
-        loading='eager'
+        loading='lazy'
         sizes="75vw"
       />
       <Bookmark isMarked={isBookmarked} />

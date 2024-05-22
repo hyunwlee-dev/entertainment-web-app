@@ -13,7 +13,7 @@ export default function SearchBar({ className, ...props }: SearchBarProp) {
   const pathname = usePathname();
   const { replace } = useRouter();
   const handleSearch = (term: string) => {
-    console.log(`Searching... ${term}`);
+    console.log(`Searching... ${term} ${pathname}`);
     const params = new URLSearchParams(searchParams);
     if (term)
       params.set('q', term);
@@ -39,7 +39,7 @@ export default function SearchBar({ className, ...props }: SearchBarProp) {
         onChange={(e) => {
           handleSearch(e.target.value);
         }}
-        defaultValue={searchParams.get('query')?.toString()}
+        defaultValue={searchParams.get('q')?.toString()}
         autoFocus
       />
     </div>

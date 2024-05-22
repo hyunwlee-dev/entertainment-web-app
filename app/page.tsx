@@ -4,24 +4,26 @@ import Navigation from "@/app/ui/common/navigation";
 import Container from "@/app/ui/common/container";
 import CardList from "@/app/ui/common/card-list";
 import TrendingList from "@/app/ui/common/trending-list";
-import SearchBar from "@/app/ui/common/search-bar";
 import TrendingListSkeleton from "@/app/ui/common/trending-list/trending-list.skeleton";
 import CardListSkeleton from "@/app/ui/common/card-list/card-list.skeleton";
+import SearchBar from "@/app/ui/common/search-bar";
 
-export default async function Home({ searchParams }: { searchParams?: { q: string } }) {
+export default async function Home({ searchParams }: { searchParams?: { q?: string } }) {
   const query = searchParams?.q || '';
   return (
     <>
       <Navigation
         signOut={
           async () => {
-            'use server'
-            await signOut()
+            'use server';
+            await signOut();
           }
         }
       />
       <Container as='main'>
-        <SearchBar />
+        <Suspense fallback={<div>Loading SearchBar...</div>}>
+          <SearchBar />
+        </Suspense>
         <Suspense fallback={<TrendingListSkeleton />}>
           <TrendingList title='Trending' />
         </Suspense>
@@ -32,3 +34,4 @@ export default async function Home({ searchParams }: { searchParams?: { q: strin
     </>
   );
 }
+
