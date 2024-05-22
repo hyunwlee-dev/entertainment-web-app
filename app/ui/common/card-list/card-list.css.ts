@@ -16,6 +16,14 @@ const cardList = style({
   }
 });
 
+const existOnly = style({
+  '@media': {
+    [$breakpoints.laptop]: {
+      top: '8.125rem',
+    }
+  }
+});
+
 const heading = style({
   width: '100%',
   font: vars.font.title,
@@ -116,6 +124,7 @@ const skeletonTitle = style({
 
 const styles = {
   cardList,
+  existOnly,
   heading,
   list,
   skeletonHeading,

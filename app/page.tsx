@@ -18,9 +18,11 @@ export default async function Home({ searchParams }: { searchParams?: { q?: stri
         <Suspense fallback={<div>Loading SearchBar...</div>}>
           <SearchBar />
         </Suspense>
-        <Suspense fallback={<TrendingListSkeleton />}>
-          <TrendingList title='Trending' />
-        </Suspense>
+        {query === '' ?
+          (<Suspense fallback={<TrendingListSkeleton />}>
+            <TrendingList title='Trending' />
+          </Suspense>) : null
+        }
         <Suspense fallback={<CardListSkeleton />}>
           <CardList title='Recommended for you' query={query} />
         </Suspense>
