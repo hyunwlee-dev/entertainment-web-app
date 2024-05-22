@@ -3,6 +3,7 @@
 import { HTMLAttributes } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import SearchIcon from "@icons/icon-search.svg";
+import { useDebouncedCallback } from "use-debounce";
 import clsx from "clsx";
 import styles from "./search-bar.css";
 
@@ -12,7 +13,7 @@ export default function SearchBar({ className, ...props }: SearchBarProp) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const handleSearch = (term: string) => {
+  const handleSearch = useDebouncedCallback((term: string) => {
     console.log(`Searching... ${term} ${pathname}`);
     const params = new URLSearchParams(searchParams);
     if (term)
@@ -20,7 +21,7 @@ export default function SearchBar({ className, ...props }: SearchBarProp) {
     else
       params.delete('q');
     replace(`${pathname}?${params.toString()}`);
-  };
+  }, 300);
 
   return (
     <div className={clsx(styles.form, className)} {...props}>
