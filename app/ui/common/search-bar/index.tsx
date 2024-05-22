@@ -7,9 +7,11 @@ import { useDebouncedCallback } from "use-debounce";
 import clsx from "clsx";
 import styles from "./search-bar.css";
 
-interface SearchBarProp extends HTMLAttributes<HTMLDivElement> { }
+interface SearchBarProp extends HTMLAttributes<HTMLDivElement> {
+  placeholder: string;
+}
 
-export default function SearchBar({ className, ...props }: SearchBarProp) {
+export default function SearchBar({ placeholder, className, ...props }: SearchBarProp) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -36,7 +38,7 @@ export default function SearchBar({ className, ...props }: SearchBarProp) {
         className={styles.input}
         type="search"
         id='search'
-        placeholder="Search for moview or TV series"
+        placeholder={placeholder}
         onChange={(e) => {
           handleSearch(e.target.value);
         }}

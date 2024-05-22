@@ -6,7 +6,7 @@ export default async function Home({ searchParams }: { searchParams?: { q?: stri
   return (
     <>
       <Suspense fallback={<div>Loading SearchBar...</div>}>
-        <SearchBar />
+        <SearchBar placeholder='Search for movies or TV series' />
       </Suspense>
       {query === '' ?
         (<Suspense fallback={<TrendingListSkeleton />}>

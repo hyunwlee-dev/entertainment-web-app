@@ -28,8 +28,8 @@ export default function Description({
             ? <Icon name='movies' isStroke className={styles.categoryIcon} />
             : <Icon name='tv-series' isStroke className={styles.categoryIcon} />
         }</span>
-        <OvalIcon className={styles.ovalRt} />
         <span>{category}</span>
+        <OvalIcon className={styles.ovalRt} />
         <span>{rating}</span>
       </div>
       <h3 className={styles.title}>{title}</h3>

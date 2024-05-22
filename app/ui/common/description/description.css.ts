@@ -32,7 +32,7 @@ const categoryIcon = style({
   transform: 'scale(0.5) translateY(1.5px)',
   '@media': {
     [$breakpoints.tablet]: {
-      transform: 'scale(0.6) translateY(2.5px)',
+      transform: 'scale(0.6) translateY(5px)',
     }
   }
 });
@@ -42,7 +42,7 @@ const ovalLt = style({
 });
 
 const ovalRt = style({
-  margin: '0 7px 0 4px',
+  margin: '0 6px',
 });
 
 const styles = {
