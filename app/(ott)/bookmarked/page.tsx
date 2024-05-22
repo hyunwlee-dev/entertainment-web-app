@@ -1,9 +1,16 @@
-export default function BookmarkedPage() {
+import { Suspense } from "react";
+import { CardList, CardListSkeleton, SearchBar } from "@ui/common";
+
+export default async function BookmarkedPage({ searchParams }: { searchParams?: { q?: string } }) {
+  const query = searchParams?.q || '';
   return (
     <>
-      Search for bookmarked shows
-      Bookmarked Movies
-      Bookmarked TV Series
+      <Suspense fallback={<div>Loading SearchBar...</div>}>
+        <SearchBar />
+      </Suspense>
+      <Suspense fallback={<CardListSkeleton />}>
+        <CardList title='Bookmarked' category='Bookmarked' query={query} />
+      </Suspense>
     </>
   );
 }

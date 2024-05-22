@@ -1,30 +1,16 @@
-import { signOut } from "@/auth";
+import { Suspense } from "react";
+import { CardList, CardListSkeleton, SearchBar } from "@ui/common";
 
-export default function TvSeriesPage() {
+export default async function TvSeriesPage({ searchParams }: { searchParams?: { q?: string } }) {
+  const query = searchParams?.q || '';
   return (
     <>
-      Search for TV series
-      TV Series
-      <form
-        action={async () => {
-          'use server';
-          await signOut();
-        }}
-      >
-        <button>
-          Sign Out
-        </button>
-      </form>
+      <Suspense fallback={<div>Loading SearchBar...</div>}>
+        <SearchBar />
+      </Suspense>
+      <Suspense fallback={<CardListSkeleton />}>
+        <CardList title='TV Series' category='TV Series' query={query} />
+      </Suspense>
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
