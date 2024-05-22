@@ -8,7 +8,7 @@ export default async function BookmarkedPage({ searchParams }: { searchParams?: 
       <Suspense fallback={<div>Loading SearchBar...</div>}>
         <SearchBar placeholder='Search for bookmarked shows' />
       </Suspense>
-      <Suspense fallback={<CardListSkeleton />}>
+      <Suspense fallback={<CardListSkeleton isExistOnly />}>
         <CardList title='Bookmarked' category='Bookmarked' query={query} />
       </Suspense>
     </>

@@ -3,12 +3,15 @@
 import { PropsWithChildren } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import clsx from 'clsx';
 import styles from './card-list.css';
 
-export default function CardListSkeleton({ }) {
+export default function CardListSkeleton({
+  isExistOnly = false
+}: { isExistOnly: boolean }) {
   return (
     <SkeletonTheme baseColor='#202020' highlightColor='#444'>
-      <section className={styles.cardList}>
+      <section className={clsx(styles.cardList, { [styles.existOnly]: isExistOnly })}>
         <Skeleton wrapper={Heading} height={'100%'} />
         <div className={styles.list}>
           <div className={styles.skeletonItem}>
@@ -99,7 +102,7 @@ export default function CardListSkeleton({ }) {
           </div>
         </div>
       </section>
-    </SkeletonTheme>
+    </SkeletonTheme >
   );
 }
 

@@ -13,7 +13,7 @@ export default async function Home({ searchParams }: { searchParams?: { q?: stri
           <TrendingList title='Trending' />
         </Suspense>) : null
       }
-      <Suspense fallback={<CardListSkeleton />}>
+      <Suspense fallback={<CardListSkeleton isExistOnly={false} />}>
         <CardList title='Recommended for you' category='ALL' query={query} />
       </Suspense>
     </>

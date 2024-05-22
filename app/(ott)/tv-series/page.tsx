@@ -8,7 +8,7 @@ export default async function TvSeriesPage({ searchParams }: { searchParams?: { 
       <Suspense fallback={<div>Loading SearchBar...</div>}>
         <SearchBar placeholder='Search for TV series' />
       </Suspense>
-      <Suspense fallback={<CardListSkeleton />}>
+      <Suspense fallback={<CardListSkeleton isExistOnly />}>
         <CardList title='TV Series' category='TV Series' query={query} />
       </Suspense>
     </>
