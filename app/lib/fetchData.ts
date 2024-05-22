@@ -2,7 +2,7 @@
 import { Entertainment } from "./definitions";
 import { entertainments } from "./data";
 import { sql } from "@vercel/postgres";
-import { toCamelCase } from "@/app/util/toCamelCase";
+import { toCamelCase } from "@util/toCamelCase";
 
 export async function fetchMockDatas(): Promise<Entertainment[]> {
   return new Promise(resolve => {

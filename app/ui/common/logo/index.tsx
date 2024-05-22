@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import Link from "next/link";
+import LogoIcon from "@icons/logo.svg";
 import styles from "./logo.css";
-import LogoIcon from "/public/icons/logo.svg";
 
 interface LogoProps extends HTMLAttributes<HTMLAnchorElement> {
 }

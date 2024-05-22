@@ -1,5 +1,5 @@
-import Icon from "@/app/ui/common/icon";
-import OvalIcon from "/public/icons/oval.svg";
+import { Icon } from "@ui/common";
+import OvalIcon from "@icons/oval.svg";
 import clsx from "clsx";
 import styles from "./description.css";
 

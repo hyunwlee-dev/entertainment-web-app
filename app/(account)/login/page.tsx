@@ -1,5 +1,5 @@
-import { metadata } from "@/app/layout";
-import LoginForm from "@/app/ui/login/login-form";
+import { metadata } from "@app/layout";
+import LoginForm from "@ui/login/login-form";
 
 metadata.title = 'login';
 

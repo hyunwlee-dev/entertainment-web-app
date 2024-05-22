@@ -1,11 +1,10 @@
 import { HTMLAttributes } from "react";
 import Image, { getImageProps } from "next/image";
-import getBase64 from "@/app/util/getBase64";
-import Bookmark from "@/app/ui/common/bookmark";
-import { Entertainment } from "@/app/lib/definitions";
+import { Bookmark, Description } from "@ui/common";
+import getBase64 from "@util/getBase64";
+import { Entertainment } from "@lib/definitions";
 import clsx from "clsx";
 import styles from "./card.css";
-import Description from "../description";
 
 export default async function Card({ children, ...props }: HTMLAttributes<HTMLLIElement>) {
   return (

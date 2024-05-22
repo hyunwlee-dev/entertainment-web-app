@@ -1,7 +1,6 @@
-import Carousel from "@/app/ui/common/carousel";
+import { Carousel, Tile } from "@ui/common";
+import { fetchTrendingEntertainments } from "@lib/fetchData";
 import styles from "./trending-list.css";
-import Tile from "@/app/ui/common/carousel/tile";
-import { fetchTrendingEntertainments } from "@/app/lib/fetchData";
 
 export default async function TrendingList({
   title,

@@ -1,11 +1,11 @@
 'use client';
 
-import { authenticate } from '@/app/lib/actions';
 import { useFormState, useFormStatus } from 'react-dom';
-import styles from './login-form.css';
-import Button from '@/app/ui/common/button';
 import Link from 'next/link';
+import Button from '@ui/common/button';
+import { authenticate } from '@lib/actions';
 import clsx from 'clsx';
+import styles from './login-form.css';
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);

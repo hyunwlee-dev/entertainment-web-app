@@ -1,6 +1,6 @@
-import Card from "@/app/ui/common/card";
+import { Card } from "@ui/common";
+import { fetchFilteredEntertainments } from "@lib/fetchData";
 import styles from "./card-list.css";
-import { fetchFilteredEntertainments } from "@/app/lib/fetchData";
 
 interface CardListProps {
   title: string;

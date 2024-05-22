@@ -1,9 +1,9 @@
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
-import Button from '@/app/ui/common/button';
 import Link from 'next/link';
-import { signUp } from '@/app/lib/actions';
+import Button from '@ui/common/button';
+import { signUp } from '@lib/actions';
 import clsx from 'clsx';
 import styles from './sign-up-form.css';
 

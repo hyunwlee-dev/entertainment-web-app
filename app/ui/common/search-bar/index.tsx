@@ -1,10 +1,10 @@
 "use client";
 
 import { HTMLAttributes } from "react";
-import SearchIcon from "/public/icons/icon-search.svg";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import SearchIcon from "@icons/icon-search.svg";
 import clsx from "clsx";
 import styles from "./search-bar.css";
-import { useSearchParams, useRouter, usePathname } from "next/navigation";
 
 interface SearchBarProp extends HTMLAttributes<HTMLDivElement> { }
 

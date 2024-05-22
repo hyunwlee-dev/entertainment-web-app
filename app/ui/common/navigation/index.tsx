@@ -2,10 +2,10 @@
 
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
-import Icon from "@/app/ui/common/icon";
-import Logo from "@/app/ui/common/logo";
-import Avatar from "@/app/ui/common/avatar";
-import SignOutIcon from "/public/icons/sign-out.svg";
+import Icon from "@ui/common/icon";
+import Logo from "@ui/common/logo";
+import Avatar from "@ui/common/avatar";
+import SignOutIcon from "@icons/sign-out.svg";
 import styles from "./navigation.css";
 
 export default function Navigation({ signOut }: { signOut: () => void }) {

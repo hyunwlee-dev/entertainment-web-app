@@ -1,9 +1,8 @@
 import Image, { getImageProps } from "next/image";
-import { Entertainment } from "@/app/lib/definitions";
-import Bookmark from "@/app/ui/common/bookmark";
-import Description from "@/app/ui/common/description";
+import { Bookmark, Description } from "@ui/common";
+import { Entertainment } from "@lib/definitions";
+import getBase64 from "@util/getBase64";
 import styles from "./carousel.css";
-import getBase64 from "@/app/util/getBase64";
 
 export default async function Tile({
   title,

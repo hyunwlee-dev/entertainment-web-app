@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { outfit } from "@/app/styles/font";
+import { outfit } from "@styles/font";
 import "normalize.css";
-import "@/app/styles/globals.css";
+import "@styles/globals.css";
 
 const title = process.env.NEXT_PUBLIC_TITLE;
 const description = process.env.NEXT_PUBLIC_DESCRIPTION;

@@ -1,4 +1,4 @@
-import { SvgType } from "@/app/type/svg";
+import { SvgType } from "@type/svg";
 
 export default function TvSeriesIcon({
   className,

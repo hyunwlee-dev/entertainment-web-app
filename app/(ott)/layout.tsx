@@ -1,5 +1,4 @@
-import Container from "@/app/ui/common/container";
-import Navigation from "@/app/ui/common/navigation";
+import { Container, Navigation } from "@ui/common";
 import { signOut } from "@/auth";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
